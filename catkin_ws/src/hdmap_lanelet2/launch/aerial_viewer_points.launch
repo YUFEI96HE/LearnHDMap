@@ -1,0 +1,73 @@
+<launch>
+    <!-- PointCloud source topic-->
+    <arg name="pointcloud_input" default="/lslidar_point_cloud" />
+    <!-- Raw Image source topic to be rectified-->
+    <arg name="image_input" default="/usb_cam/image_raw" />
+    <!-- CameraInfo source topic-->
+    <arg name="camera_info_input" default="/camera_info" />
+
+    <arg name="fusion_output_topic" default="/points_output"/>
+    <!--  -->
+    <arg name="test_cloud_topic_1" default="/test_cloud_1"/>
+    <arg name="test_cloud_topic_2" default="/test_cloud_2"/>
+    <arg name="test_cloud_topic_3" default="/test_cloud_3"/>
+
+    <arg name="calibration_file" default="$(find hdmap_calibration_publisher)/params/zed_lidar_camera_1080p.yaml"/>
+
+    <node pkg="hdmap_lanelet2" type="aerial_viewer_points" name="aerial_viewer_points" output="screen">
+        <param name="pointcloud_input" value="$(arg pointcloud_input)" />
+        <param name="image_input" value="$(arg image_input)" />
+        <param name="camera_info_input" value="$(arg camera_info_input)" />
+        <param name="calibration_file" value="$(arg calibration_file)"/>
+        <param name="fusion_output_topic" value="$(arg fusion_output_topic)" />
+        <param name="test_cloud_topic_1" value="$(arg test_cloud_topic_1)" />
+        <param name="test_cloud_topic_2" value="$(arg test_cloud_topic_2)" />
+        <param name="test_cloud_topic_3" value="$(arg test_cloud_topic_3)" />
+
+        <!-- <param name="min_local_height_threshold" type="double" value="0.05" />
+        <param name="radial_divide_angle" type="double" value="0.5" />
+        <param name="concentric_divide_distance" type="double" value="0.1" /> -->
+
+        <!-- filter: 左右(-clip_left_right_dis, clip_left_right_dis) -->
+        <!-- <param name="clip_left_right_dis" type="double" value="50" /> -->
+        <!-- filter: 前后(clip_dis, clip_far) -->
+        <!-- <param name="clip_far" type="double" value="500" />
+        <param name="clip_dis" type="double" value="1" /> -->
+        <!-- filter: 上限 clip_height -->
+        <!-- <param name="clip_height" type="double" value="10.0" /> -->
+
+        <!-- <param name="sensor_height" type="double" value="0.8" />
+        <param name="local_slope_threshold" type="double" value="5.0" />
+        <param name="general_slope_threshhold" type="double" value="3.0" /> -->
+
+        <rosparam file="$(find hdmap_lanelet2)/param/config.yaml" command="load"/>
+    </node>
+
+ 
+        <!-- <node type="rviz" name="rviz" pkg="rviz" args="-d /home/heyufei/YUFEI96HE/Rviz/pixel_point_fusion_rviz_debug.rviz" /> -->
+
+    <!-- [ x: -0.2115879, y: -1.3866209, z: 1.3651224 ] -->
+    <!-- camera_velodyne_translation.x = -camera_velodyne_point.z;
+	     camera_velodyne_translation.y = camera_velodyne_point.x;
+	     camera_velodyne_translation.z = camera_velodyne_point.y; -->
+
+    <!-- <node pkg="tf" type="static_transform_publisher" name="tf_camera_to_lidar" args="0.031792  -0.137565  0.121913  -0.2115879  -1.3866209  1.3651224   usb_cam  laser  100" /> -->
+    <!-- <node pkg="tf" type="static_transform_publisher" name="tf_camera_to_lidar" args="-0.103172  0.0  -0.135289  3.1415926536 -0.1745329252 0.0  usb_cam  laser  100" /> -->
+
+    <!-- <node pkg="tf" type="static_transform_publisher" name="tf_camera_to_lidar" args="-0.12085094156803729  0.0018921461464539934  0.12625065665672136  -0.0377713, -0.028555, 0.998463, -0.0288031  usb_cam laser  100" /> -->
+    <!-- <node pkg="tf" type="static_transform_publisher" name="tf_camera_to_lidar" args="0.0  0.0  10  0.0, 0.0, 0.0, 1.0  usb_cam laser  100" /> -->
+
+    <!-- zed 1280 720 left & lslidar result 2 -->
+    <!-- <node pkg="tf" type="static_transform_publisher" name="tf_camera_to_lidar" args="-0.058963779622631211  0.020277872737934539  0.034493961563525043  -0.493169 -0.506977 0.5113669 -0.4881215   usb_cam laser  100" /> -->
+
+    <!-- <node pkg="tf" type="static_transform_publisher" name="tf_b2c" args="0.0318 0.0 -0.122    0.0       0.0   0.0           base_link camera_link 100" /> -->
+    <!-- 
+    <node pkg="tf" type="static_transform_publisher" name="tf_base_to_imu" args="-1.405  0.32  0.93  0.0  0.0  0.0  1.0  base_link  imu_link  100" />
+    <node pkg="tf" type="static_transform_publisher" name="tf_imu_to_lidar" args="0.8105439034864795  -0.3070543592060771  0.8027240582768986  -0.007412088004638236  0.0010150864862642243  0.000385188259497205  0.999971937106237  imu_link  velo_link  100" />
+    <node pkg="tf" type="static_transform_publisher" name="tf_imu_to_image_left" args="1.0832398213649872  -0.24772046694030603  0.7296550332334873  -0.49920863559366935  0.49657270183611535  -0.5029076838733983  0.5012884651770674  imu_link  camera_color_left  100" /> -->
+
+    <!-- <node pkg="tf" type="static_transform_publisher" name="base2laser" args="0 0 0 0 0 0 1 base_link laser 100" /> -->
+    <!-- <node pkg="tf" type="static_transform_publisher" name="base2camera" args="-0.12085094156803729  0.0018921461464539934  -0.12625065665672136  -0.0377713, -0.028555, 0.998463, -0.0288031  base_link usb_cam  100" /> -->
+
+
+</launch>
