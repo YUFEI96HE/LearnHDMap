@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<osm version="0.6" generator="lanelet2">
+  <node id="1000" visible="true" version="1" lat="0.0001262133" lon="0.0007433559">
+    <tag k="local_2d_x" v="1973.000000" />
+    <tag k="local_2d_y" v="45.000000" />
+    <tag k="local_3d_x" v="82.750000" />
+    <tag k="local_3d_y" v="14.050000" />
+    <tag k="local_3d_z" v="0.000000" />
+    <tag k="local_name" v="dzone-1-point-1" />
+  </node>
+  <node id="1001" visible="true" version="1" lat="0.00009567058" lon="0.0007433559">
+    <tag k="local_2d_x" v="1973.000000" />
+    <tag k="local_2d_y" v="113.000000" />
+    <tag k="local_3d_x" v="82.750000" />
+    <tag k="local_3d_y" v="10.650000" />
+    <tag k="local_3d_z" v="0.000000" />
+    <tag k="local_name" v="dzone-1-point-2" />
+  </node>
+  <node id="1003" visible="true" version="1" lat="-0.00002021209" lon="-0.00009567058">
+    <tag k="local_2d_x" v="105.000000" />
+    <tag k="local_2d_y" v="371.000000" />
+    <tag k="local_3d_x" v="-10.650000" />
+    <tag k="local_3d_y" v="-2.250000" />
+    <tag k="local_3d_z" v="0.000000" />
+    <tag k="local_name" v="road-1-crub-1-point-1" />
+  </node>
+  <node id="1004" visible="true" version="1" lat="0.00005434807" lon="0.00088484055">
+    <tag k="local_2d_x" v="2288.000000" />
+    <tag k="local_2d_y" v="205.000000" />
+    <tag k="local_3d_x" v="98.500000" />
+    <tag k="local_3d_y" v="6.050000" />
+    <tag k="local_3d_z" v="0.000000" />
+    <tag k="local_name" v="road-1-crub-1-point-2" />
+  </node>
+  <node id="1006" visible="true" version="1" lat="0.00002515283" lon="-0.00005075481">
+    <tag k="local_2d_x" v="205.000000" />
+    <tag k="local_2d_y" v="270.000000" />
+    <tag k="local_3d_x" v="-5.650000" />
+    <tag k="local_3d_y" v="2.800000" />
+    <tag k="local_3d_z" v="0.000000" />
+    <tag k="local_name" v="road-1-crub-2-point-1" />
+  </node>
+  <node id="1007" visible="true" version="1" lat="0.000091179" lon="0.00080084808">
+    <tag k="local_2d_x" v="2101.000000" />
+    <tag k="local_2d_y" v="123.000000" />
+    <tag k="local_3d_x" v="89.150000" />
+    <tag k="local_3d_y" v="10.150000" />
+    <tag k="local_3d_z" v="0.000000" />
+    <tag k="local_name" v="road-1-crub-2-point-2" />
+  </node>
+  <node id="1010" visible="true" version="1" lat="0.00013968803" lon="0.0008906796">
+    <tag k="local_2d_x" v="2301.000000" />
+    <tag k="local_2d_y" v="15.000000" />
+    <tag k="local_3d_x" v="99.150000" />
+    <tag k="local_3d_y" v="15.550000" />
+    <tag k="local_3d_z" v="0.000000" />
+    <tag k="local_name" v="road-2-crub-1-point-1" />
+  </node>
+  <node id="1011" visible="true" version="1" lat="0.00005973797" lon="-0.00014058634">
+    <tag k="local_2d_x" v="5.000000" />
+    <tag k="local_2d_y" v="193.000000" />
+    <tag k="local_3d_x" v="-15.650000" />
+    <tag k="local_3d_y" v="6.650000" />
+    <tag k="local_3d_z" v="0.000000" />
+    <tag k="local_name" v="road-2-crub-1-point-2" />
+  </node>
+  <way id="1002" visible="true" version="1">
+    <nd ref="1000" />
+    <nd ref="1001" />
+    <tag k="local_name" v="dzone-1" />
+  </way>
+  <way id="1005" visible="true" version="1">
+    <nd ref="1003" />
+    <nd ref="1004" />
+    <tag k="local_name" v="road-1-crub-1" />
+  </way>
+  <way id="1008" visible="true" version="1">
+    <nd ref="1006" />
+    <nd ref="1007" />
+    <tag k="local_name" v="road-1-crub-2" />
+    <tag k="subtype" v="dashed" />
+  </way>
+  <way id="1012" visible="true" version="1">
+    <nd ref="1010" />
+    <nd ref="1011" />
+    <tag k="local_name" v="road-2-crub-1" />
+  </way>
+  <way id="1015" visible="true" version="1">
+    <nd ref="1006" />
+    <nd ref="1007" />
+    <tag k="local_name" v="road-2-crub-2" />
+    <tag k="subtype" v="dashed" />
+  </way>
+  <relation id="1009" visible="true" version="1">
+    <member type="way" ref="1008" role="left" />
+    <member type="way" ref="1005" role="right" />
+    <tag k="local_direction" v="work-step-1" />
+    <tag k="local_name" v="road-1" />
+    <tag k="type" v="line_thin" />
+  </relation>
+  <relation id="1016" visible="true" version="1">
+    <member type="way" ref="1015" role="left" />
+    <member type="way" ref="1012" role="right" />
+    <tag k="local_direction" v="work-step-2" />
+    <tag k="local_name" v="road-2" />
+    <tag k="type" v="line_thin" />
+  </relation>
+</osm>

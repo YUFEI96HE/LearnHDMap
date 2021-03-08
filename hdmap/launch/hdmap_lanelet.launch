@@ -1,0 +1,43 @@
+<launch>
+
+    <arg name="pointcloud_input"    default="/lslidar_point_cloud" />
+    <arg name="image_input"         default="/usb_cam/image_raw" />
+    <arg name="camera_info_input"   default="/camera_info" />
+
+    <arg name="fusion_output_topic" default="/points_output"/>
+
+    <arg name="test_cloud_topic_1"  default="/test_cloud_1"/>
+    <arg name="test_cloud_topic_2"  default="/test_cloud_2"/>
+    <arg name="test_cloud_topic_3"  default="/test_cloud_3"/>
+
+    <arg name="source_pcds"         default="$(find hdmap)/data/pcds"/>
+    <arg name="source_imgs"         default="$(find hdmap)/data/imgs"/>
+    <arg name="source_json"         default="$(find hdmap)/data/json"/>
+    <arg name="save_dir"            default="$(find hdmap)/maps"/>
+    <arg name="pose_6d"             default="$(find hdmap)/data/0205/pose6d.pcd"/>
+
+    <arg name="calibration_file"    default="$(find hdmap_calibration_publisher)/params/zed_lidar_camera_1080p.yaml"/>
+
+
+
+
+    <node pkg="hdmap" type="hdmap_lanelet" name="hdmap_lanelet" output="screen">
+        <param name="pointcloud_input"      value="$(arg pointcloud_input)" />
+        <param name="image_input"           value="$(arg image_input)" />
+        <param name="camera_info_input"     value="$(arg camera_info_input)" />
+        <param name="calibration_file"      value="$(arg calibration_file)"/>
+        <param name="fusion_output_topic"   value="$(arg fusion_output_topic)" />
+        <param name="test_cloud_topic_1"    value="$(arg test_cloud_topic_1)" />
+        <param name="test_cloud_topic_2"    value="$(arg test_cloud_topic_2)" />
+        <param name="test_cloud_topic_3"    value="$(arg test_cloud_topic_3)" />
+
+        <param name="source_pcds"           value="$(arg source_pcds)" />
+        <param name="source_imgs"           value="$(arg source_imgs)" />
+        <param name="source_json"           value="$(arg source_json)" />
+        <param name="save_dir"              value="$(arg save_dir)" />
+
+        <rosparam file="$(find hdmap)/param/config.yaml" command="load"/>
+        
+    </node>
+
+</launch>

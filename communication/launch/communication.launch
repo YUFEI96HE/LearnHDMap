@@ -1,0 +1,3 @@
+<launch>
+	<node pkg="communication" type="communication_node" name="communication" output="screen"/>
+</launch>

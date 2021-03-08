@@ -1,0 +1,40 @@
+# filepath
+divided_data_path: "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/hdmap_data/version-003/"
+pose_6d_path: "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/hdmap_data/version-003/hd_map_0205/pose6d.pcd"
+
+laneletMap_path_in: "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/hdmap_data/version-003/wuxi_v2.osm"
+laneletMap_path_out: "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/hdmap_data/version-003/wuxi_v2_edition.osm"
+
+#params
+data_num: 20
+
+costmap_height: 1462
+costmap_width: 3382
+
+height: 1080
+width: 1920
+fx: 1399.56
+fy: 1399.56
+cx: 1049.69
+cy: 540.251
+k1: -0.178554
+k2: 0.0307435
+
+tf_b2l_x: 0.78
+tf_b2l_y: 0.
+tf_b2l_z: 0.
+tf_b2l_roll: 0.0          
+tf_b2l_pitch: 0.0            
+tf_b2l_yaw: 3.141592654
+# 3.141592654
+image_id: "usb_cam"
+lidar_id: "laser"
+
+point_height_limit: 0.0
+
+resolution: 0.05
+
+origin_point_x: 19
+origin_point_y: 20
+
+# save_dir: "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/hdmap/maps"

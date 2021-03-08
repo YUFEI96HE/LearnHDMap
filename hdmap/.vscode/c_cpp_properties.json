@@ -1,0 +1,53 @@
+{
+    "configurations": [
+        {
+            "browse": {
+                "databaseFilename": "",
+                "limitSymbolsToIncludedHeaders": true
+            },
+            "includePath": [
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/devel/include/**",
+                "/home/heyufei/learn/hdmap/catkin_ws/devel/include/**",
+                "/opt/ros/noetic/include/**",
+                "/home/heyufei/learn/hdmap/catkin_ws/src/modules/utils/calibration_publisher/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/communication/communication/include/**",
+                "/home/heyufei/learn/hdmap/catkin_ws/src/drivers/cv_camera_driver/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/grid_map/grid_map_core/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/grid_map/grid_map_costmap_2d/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/grid_map/grid_map_cv/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/grid_map/grid_map_demos/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/grid_map/grid_map_filters/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/grid_map/grid_map_loader/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/grid_map/grid_map_octomap/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/grid_map/grid_map_pcl/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/grid_map/grid_map_ros/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/grid_map/grid_map_rviz_plugin/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/grid_map/grid_map_sdf/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/grid_map/grid_map_visualization/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/hdmap/hdmap_common/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/hdmap/hdmap_lanelet2/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/hdmap/hdmap_pixel_point_fusion/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/hdmap/hdmap_points_processing/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/hdmap/hdmap_image_processing/include/**",
+                "/home/heyufei/learn/hdmap/catkin_ws/src/perception/joint_pixel_pointcloud/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/perception/lidar_euclidean_cluster_detect/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/drivers/lpms_imu_me_i2c/lpms_imu_me/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/calibration/matlab_lidar_camera_calibrator/include/**",
+                "/home/heyufei/learn/hdmap/catkin_ws/src/test/multi_camera_points2image/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/map/ndt_cpu/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/localization/ndt_localization/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/learn/ndt_map/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/localization/odom_imu/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/third/pcl_conversions/include/**",
+                "/home/heyufei/learn/hdmap/catkin_ws/src/perception/points2image/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/hdmap/hdmap_publisher/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/drivers/lpms_imu_me_i2c/timesync_ros/include/**",
+                "/home/heyufei/YUFEI96HE/LearnHDMap/catkin_ws/src/common/vector_map/include/**",
+                "/usr/include/**"
+            ],
+            "name": "ROS",
+            "configurationProvider": "go2sh.cmake-integration"
+        }
+    ],
+    "version": 4
+}

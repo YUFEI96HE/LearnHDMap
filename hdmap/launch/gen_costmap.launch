@@ -1,0 +1,7 @@
+<launch>
+    <!-- 轨迹生成节点 -->
+    <node pkg="hdmap" type="gen_costmap" name="gen_costmap" output="screen"> 
+        <!-- save dir -->
+        <param name="save_dir" type="string" value="$(find hdmap)/maps/" />
+    </node>
+</launch>

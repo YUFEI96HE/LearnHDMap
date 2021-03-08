@@ -1,0 +1,11 @@
+<launch>
+    <!-- 轨迹生成节点 -->
+    <node pkg="hdmap" type="gen_trajectory" name="gen_trajectory" output="screen"> 
+        <!-- save dir -->
+        <param name="traj_json_save_dir" type="string" value="$(find hdmap)/maps/" />
+        <!-- 轨迹采样间隔 单位-米 -->
+        <param name="min_distance" type="double" value="0.5" />
+        <!-- 轨迹贴边距离 单位-米 -->
+        <param name="distance_from_curb" type="double" value="1.4" />
+    </node>
+</launch>
